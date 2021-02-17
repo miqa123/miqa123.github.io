@@ -1,0 +1,125 @@
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="user.css">
+     <title>Document</title>
+   </head>
+   <body>
+     <header>
+      <label for="ChangeTheme">
+        <input type="checkbox" id="ChangeTheme" /> <span class="slide"></span>
+      </label>
+    </header>
+    <div class="container">
+      <form id="todoForm">
+          <input type="text" id="todoInput" placeholder="  Aa">
+          <button type="button" class="btn" onclick="todoList()"><img src="./img/paper-airplane-symbol.png"></button>
+           <button class="like"><img src="./img/like.png"></button>
+      </form>
+    </div>
+
+      <ul id="todoList">
+       
+      </ul>
+
+      
+      
+      <script src="user.js"></script>
+
+      <style>
+        body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      min-width: 100vw;
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      overflow: hidden;
+      box-sizing: border-box;
+      font-family: "Century Gothic";
+    }
+    
+    #ChangeTheme {
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+    label {
+      display: block;
+      height: 15px;
+      width: 60px;
+      position: relative;
+    }
+    span.slide {
+      position: absolute;
+      width: 80%;
+      height: 150%;
+      background: #dadada;
+      border-radius: 30px;
+    }
+    span.slide:before {
+      position: absolute;
+      content: "";
+      height: 23px;
+      width: 23px;
+      background: #fff;
+      border-radius: 50%;
+      top: 2%;
+      left: 0px;
+      transition: 0.5s;
+      box-shadow: rgba(0, 0, 0, 0.21) 0px 0px 7px 1px;
+    }
+    
+    #ChangeTheme:checked + span.slide:before {
+      transform: translatex(25px);
+    }
+    
+    body.dark-mode {
+      background: #353535;
+    }
+    
+    .slide{
+      margin-top: 20%;
+    }
+    
+    </style>
+    
+    <script>
+        const checkbox = document.getElementById("ChangeTheme");
+    
+    
+    if (sessionStorage.getItem("mode") == "dark") {
+      darkmode(); 
+    } else {
+      nodark(); 
+    }
+    
+    
+    checkbox.addEventListener("change", function() {
+      if (checkbox.checked) {
+        darkmode();
+      } else {
+        nodark(); 
+      }
+    });
+    
+    
+    function darkmode() {
+      document.body.classList.add("dark-mode");
+      checkbox.checked = true;
+      sessionStorage.setItem("mode", "dark");
+    }
+    
+    
+    function nodark() {
+      document.body.classList.remove("dark-mode"); 
+      checkbox.checked = false;
+      sessionStorage.setItem("mode", "light");
+    }
+    
+    </script>
+   </body>
+   </html>

@@ -1,0 +1,115 @@
+body{
+    background: rgba(216, 216, 216, 0.397);
+    
+}
+
+li{
+    margin-left: 80%;
+    border-radius: 20px;
+    background-color: #444950;
+    width: fit-content;
+    height: fit-content;
+    margin-top: 5%;
+    color: #fff;
+    text-align: start;
+    padding: 12px;
+    text-decoration: none;
+    list-style: none;
+    font-family: sans-serif;
+}
+
+#todoInput{
+    position: absolute;
+    top: 30%;
+    left: 70%;
+    height: 25px;
+    border-radius: 30px;
+    background-color:  #cfcfcf;
+    border: 1px solid rgba(10, 10, 10, 0.205);
+    outline: none;
+}
+
+.btn{
+    position: absolute;
+    top: 34%;
+    left: 84%;
+    border: none;
+    border-radius: 45px;
+    background: #cfcfcf;
+    outline: none;
+}
+
+.container{
+    top: 93%;
+    left: 0%;
+    background: #fff;
+    width: 100%;
+    height: 7%;
+    position: fixed;
+    bottom: 0;
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 5%;
+}
+
+.btnD{
+    background: none;
+    border: none;
+    outline: none;
+    margin-top: 0.5%;
+}
+
+.btnN{
+    background: none;
+    border: none;
+    outline: none;
+    margin-top: 0.5%;
+}
+
+a{
+    position: absolute;
+    top: 50%;
+}
+
+.like{
+    position: absolute;
+    left: 88%;
+    top: 30%;
+    border: none;
+    outline: none;
+}
+
+#like{
+    background: none;
+}
+
+.emoji{
+    background: none;
+}
+
+div{
+    margin-top: -8%;
+    margin-left: 67%;
+    background: #444950;
+    width: 250px;
+    height: 40px;
+    border-radius: 20px;
+}
+
+div{
+    margin-left: 7px;
+    margin-top: 8px;
+}
+
+h3{
+    margin-left: 75%;
+}
+
+.back{
+    border: none;
+    outline: none;
+}
